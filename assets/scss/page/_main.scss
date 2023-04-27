@@ -1,0 +1,787 @@
+.container{
+
+    .btn-box{
+        /*공통app버튼(큰사이즈)*/
+        &.big{
+            color: rgb(231, 231, 231);
+            .btn-app{
+                border: 1px solid #fff;
+                border-radius: 1000px;
+                font-size: 2vw;
+                padding: 2.3vw 4.3vw;
+            }
+        }
+        /*공통app버튼(작은사이즈)*/
+        &.sm{
+            color: rgb(231, 231, 231);
+            display: inline-block;
+            .btn-app{
+                border: 1px solid #fff;
+                border-radius: 1000px;
+                font-size: 1.38vw;
+                padding: 1.8vw 2.29vw;
+            }
+        }
+        .btn-app{
+            /*btn hover 효과*/
+        &:not(.none).hover{
+            border: 1px solid #fff;
+            color: #000;
+            background: rgb(231, 231, 231);
+        }
+        }
+    }
+    .text{
+        position: relative;
+        .line-mask{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 110%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+    .sc-headline{
+        &.top{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            /* padding-top: 230px; */
+            margin-bottom: 100vh;
+            @include desktop{
+                margin-bottom: 70vh;
+            }
+            @include tablet{
+                margin-bottom: 30vh;
+            }
+            @include mobile{
+                margin-bottom: 30vh;
+            }
+            .btn-box{
+                z-index: 1;
+                @include mobile{
+                    display: inline-block;
+                }
+                .btn-app{
+                    @include mobile{
+                        font-size: 17px;
+                        padding: 18px 20px;
+                        line-height: 28px;
+                    }
+                }
+            }
+            .mobilegroup-flex{
+                @include mobile{
+                    display: block;
+                    font-size: 15.7vw;
+                }
+                .flex-wrap{
+                    @include mobile{
+                        display: flex;
+                        position: relative;
+                    }
+                    .video1{
+                        .wrap{
+                            position: relative;
+                            padding-bottom: 100%;
+                            @include mobile{
+                                width: 14vw;
+                                height: 14vw;
+                                border-radius: 50%;
+                                overflow: hidden;
+                            }
+                        }
+                        video{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .video2{
+                        .wrap{
+                            position: relative;
+                            padding-bottom: 100%;
+                            z-index: -1;
+                            @include mobile{
+                                width: 11vw;
+                                height: 20vw;
+                                object-fit: cover;
+                            }
+                        }
+                        video{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            
+        }
+        &.bottom{
+            margin-top: 230px;
+            .video-box{
+                &.here{
+                    position: relative;
+                    padding-bottom: calc(827/1045*100%);
+                    height: 50vw;
+                    width: 100%;
+                    video{
+                        object-fit: fill;
+                        height: 80%;
+                    }
+                }
+                &.video3{
+                    position: relative;
+                    border-radius: 14px;
+                    overflow: hidden;
+                    width: 0;
+                    .wrap{
+                        position: relative;
+                        padding-bottom: calc(104/162*100%);
+                    }
+                }
+                video{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+        }
+        .group-flex{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            @include mobile{
+                display: none;
+            }
+            .text{
+                letter-spacing: -0.01em;
+                font-size: 8vw;
+                line-height: 90%;
+                color: #cdcdcd;
+                z-index: 1;
+            }
+            .flex-wrap{
+                position: relative;
+                display: flex;
+                gap: 2vw;
+            }
+            .video-box{
+                &.video1{
+                    width: 8vw;
+                    @include tablet{
+                        width: 6vw;
+                    }
+                    .wrap{
+                        position: relative;
+                        padding-bottom: 100%;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+                    video{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &.video2{
+                    width: 15vw;
+                    .wrap{
+                        position: relative;
+                        padding-bottom: calc(153/270*100%);
+                    }
+                    video{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .text-slide{
+            height: 9vw;
+            margin: 0;
+            @include mobile{
+                height: 20vw;
+            }
+            .swiper-slide{
+                letter-spacing: -0.01em;
+                color: #50ff6c;
+                font-size: 8vw;
+                line-height: 90%;
+                @include mobile{
+                    font-size: 15.7vw;
+                }
+            }
+        }
+        .mobilegroup-flex{
+            display: none;
+            @include mobile{
+                display: block;
+                font-size: 16vw;
+            }
+            .flex-wrap{
+                display: flex;
+                .video-box{
+                    width: 14vw;
+                    border-radius: 4px;
+                    height: 13vw;
+                    .wrap{
+                        position: relative;
+                        padding-bottom: 100%;
+                    }
+                    video{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .sc-about{
+        .group-why{
+            @include mobile{
+                display: none;
+            }
+            .text-box{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2vw;
+                .flex-wrap{
+                    display: flex;
+                    gap: 1.33vw;
+                    .title{
+                        vertical-align: top;
+                        margin-top: 10px;
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+                    
+                }
+            }
+            .text{
+                font-size: 4vw;
+                line-height: 105%;
+                @include mobile{
+                    font-size: 7.5vw;
+                }
+            }
+        }
+        .group-what{
+            margin: 10vw 0;
+            .inner{
+                display: flex;
+                gap: 1vw;
+                @include mobile{
+                    flex-direction: column;
+                    gap: 10vw;
+                    line-height: 101%;
+                }
+            }
+            .column-left{
+                display: flex;
+                flex-direction: column;
+                gap: 1.38vw;
+                .text{
+                    font-size: 1.38vw;
+                    @include mobile{
+                        font-size: 3.73vw;
+                    }
+                }
+                .video-box{
+                    background: url(/assets/img/배경1.JPG);
+                    position: relative;
+                    width: 31.5vw;
+                    height: 37.5vw;
+                    border-radius: 1.38vw;
+                    padding-bottom: calc(552/464*100%);
+                    overflow: hidden;
+                    @include mobile{
+                        margin-bottom: 2.56vh;
+                        width: 100%;
+                        border-radius: 30px;
+                    }
+                    video{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .column-right{
+                position: relative;
+                flex: 1;
+                .video-box{
+                    position: relative;
+                    padding-bottom: calc(750/892*100%);
+                    background: url(/assets/img/배경2.JPG);
+                    border-radius: 1.38vw;
+                    overflow: hidden;
+                    height: 50.9vw;
+                    @include mobile{
+                        width: 100%;
+                        height: 300px;
+                        border-radius: 30px;
+                    }
+                    video{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .mobilegroup-why{
+            display: none;
+            @include mobile{
+                display: flex;
+            }
+            .text-box{
+                position: relative;
+                @include mobile{
+                    flex-direction: column;
+                    font-size: 7.46vw;
+                }
+                .line-mask{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
+            }
+        }
+    }
+    .sc-content{
+        .group-title{
+            display: flex;
+            flex-direction: column;
+            margin: 13.8vw 0 5.5vw;
+            @include mobile{
+                display: none;
+            }
+            .title{
+                position: relative;
+                line-height: 90%;
+                letter-spacing: -0.1vw;
+                font-size: 10vw;
+            }
+            .hr-box{
+                position: relative;
+                hr{
+                    margin: 4vw 0 2.36vw;
+                }
+                .line-mask{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 110%;
+                    background: #000;
+                }
+            }
+            .flex-wrap{
+                display: flex;
+                justify-content: space-between;
+                .img-box{
+                    height: 3.75vw;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .text-box{
+                    width: 46vw;
+                    padding-right: 5vw;
+                    font-size: 2.36vw;
+                    line-height: 105%;
+                }
+            }
+            .line-mask{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 120%;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        }
+        .group-content{
+            border-radius: 2.08vw;
+            background-color: #1b1b1b;
+            @include mobile{
+                border-radius: 30px;
+            }
+            &.text{
+                @include mobile{
+                    border-radius: 30px;
+                    margin: 0;
+                }
+                &.white{
+                    background-color: #fff;
+                    color: #000;
+                    .btn-box{
+                        
+                        color: #000;
+                        @include mobile{
+                            display: inline-block;
+                            margin-bottom: 20px;   
+                        }
+                        .btn-app{
+                            border-color: #000;
+                            &.hover{
+                                border: 2px solid #000;
+                                background: #000;
+                                color: rgb(231, 231, 231);
+                            }
+                            @include mobile{
+                                font-size: 17px;
+                                padding: 20px;
+                            }
+                        }
+                    }
+                    .line-mask{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 110%;
+                        background-color: rgba(255, 255, 255, 0.7);
+                    }
+                }
+                .row-wrap{
+                    display: flex;
+                    padding: 5.27vw 4vw;
+                    @include mobile{
+                        flex-direction: column-reverse;
+                    }
+                    &:nth-child(2n-1){
+                        justify-content: space-between;
+                    }
+                    &:nth-child(2n){
+                        flex-direction: row-reverse;
+                        gap: 4.58vw;
+                        justify-content: start;
+                        @include desktop{
+                            gap: 10vw;
+                        }
+                        @include mobile{
+                            flex-direction: column-reverse;
+                        }
+                    }
+                }
+                .sm-title{
+                    font-size: 1.45vw;
+                    line-height: 110%;
+                    @include mobile{
+                        font-size: 14px;
+                        margin-top: 8vw;
+                    }
+                }
+                .text-box{
+                    font-size: 4vw;
+                    line-height: 105%;
+                    margin: 1.6vw 0 4.1vw;
+                    @include mobile{
+                        margin-top: 2.66vw;
+                        font-size: 10.6vw;
+                    }
+                }
+                .video-box{
+                    position: relative;
+                    padding-bottom: calc(648/500*100%);
+                    width: 34vw;
+                    border-radius: 1.38vw;
+                    overflow: hidden;
+                    @include mobile{
+                        width: 100%;
+                        border-radius: 30px;
+                    }
+                    &.gr{
+                        background: url(/assets/img/배경1.JPG);
+                    }
+                    &.v1{
+                        background: url(/assets/img/배경1.JPG);
+                    }
+                    &.v2{
+                        background: url(/assets/img/배경1.JPG);
+                    }
+                    &.bk{
+                        background: #000;
+                    }
+                    &.wh{
+                        background: url(/assets/img/배경4.JPG);
+                    }
+                    video{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .column-wrap{
+                    display: flex;
+                    padding: 5.27vw 4vw;
+                    justify-content: space-between;
+                    @include mobile{
+                        flex-direction: column-reverse;
+                    }
+                    .column-left{
+                        @include mobile{
+                            flex: 1;
+                        }
+                    }
+                    .column-right{
+                        @include mobile{
+                            flex: 1;
+                        }
+                        .video-box{
+                            @include mobile{
+                                width: 100%;
+                                max-height: none;
+                                position: relative;
+                                padding-bottom: 120%;
+                                border-radius: 30px;
+                                overflow: hidden;
+                            }
+                            video{
+                                @include mobile{
+                                    position: absolute;
+                                    top: 0;left: 0;
+                                    width: 100%;
+                                    height: 120%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .line-mask{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 110%;
+                    background-color: rgba(27, 27, 27, 0.7);
+                }
+                .btn-box{
+                    @include mobile{
+                        display: none;
+                    }
+                }
+            }
+            &.green{
+                background-image: linear-gradient(180deg, #30ff57, #30ff57);
+                border-radius: 2.08vw;   
+                padding: 8vw 8vw 8vw 4vw;
+                color: #000;
+                @include mobile{
+                    margin: 0;
+                    border-radius: 30px;
+                    background-image: linear-gradient(180deg, #50ff6c, #50ff6c);
+                }
+                .column-wrap{
+                    display: flex;
+                    position: relative;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    @include mobile{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12vw;
+                    }
+                    .column-left{
+                        position: sticky;
+                        top: 100px;
+                        font-size: 1.52vw;
+                        line-height: 135%;
+                        @include mobile{
+                            font-size: 14px;
+                        }
+                    }
+                    .column-right{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6vw;
+                        @include mobile{
+                            gap: 20vw;
+                        }
+                        .row-wrap{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 17px;
+                            font-size: 4vw;
+                            line-height: 105%;
+                            @include mobile{
+                                font-size: 7.46vw;
+                                gap: 11px;
+                            }
+                        }
+                        .name{
+                            font-size: 1.1vw;
+                            line-height: 18px;
+                            @include mobile{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .line-mask{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 110%;
+                    background-color: rgba(48, 255, 87, 0.7);
+                }
+            }
+            &.video{
+                .video-box{
+                    position: relative;
+                    border-radius: 1.38vw;
+                    overflow: hidden;
+                    @include mobile{
+                        height: 94vw;
+                        border-radius: 30px;
+                        overflow: hidden;
+                    }
+                    &.v0{
+                        background: url(/assets/img/배경3.JPG);
+                        .wrap{
+                            @include mobile{
+                                height: 90%;
+                            }
+                        }
+                    }
+                    .wrap{
+                        position: relative;
+                        padding-bottom: calc(707/1376*100%);
+                        min-height: 44vw;
+                        @include mobile{
+                            height: 100%;
+                        }
+                    }
+                    video{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .group-slide{
+            overflow: hidden;
+            margin: 6.9vw 0;
+            @include mobile{
+                margin: 24vw 0;
+            }
+            .swiper-wrapper{
+                transition-timing-function: linear;
+                .swiper-slide{
+                    width: auto;
+                    display: flex;
+                    align-items: center;
+                    gap: 4vw;
+                    margin-right: 5vw;
+                    @include mobile{
+                        gap: 5.6vw;
+                    }
+                    div{
+                        display: flex;
+                    }
+                    .img-box{
+                        position: relative;
+                        width: 162px;
+                        @include mobile{
+                            width: 64px;
+                            height: 64px;
+                        }
+                        .wrap{
+                            // position: relative;
+                            padding-bottom: 100%;
+                        }
+                        img{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .text{
+                        font-size: 11vw;
+                        color: #cdcdcd;
+                        line-height: 90%;
+                        letter-spacing: -0.01em;
+                        @include mobile{
+                            font-size: 21.3vw;
+                        }
+                    }
+                    .video-box{
+                        margin-right: 50px;
+                        height: 9vw;
+                        @include mobile{
+                            height: 17vw;
+                        }
+                        video{
+                            border-radius: 14px;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .btn-box{
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .mobilegroup-title{
+            display: none;
+            @include mobile{
+                display: block;
+                margin: 20vw 0;
+            }
+            .inner1{
+                display: flex;
+                flex-direction: column;
+                gap: 9vw;
+                .title{
+                    @include mobile{
+                        font-size: 15vw;
+                    }
+                }
+                .text-box{
+                    @include mobile{
+                        font-size: 7.46vw;
+                    }
+                }
+            }
+        }
+    }
+}
